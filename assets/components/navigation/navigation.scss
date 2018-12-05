@@ -2,7 +2,124 @@
 
 .navigation {
     position: relative;
-    font-size: 50px;
-    color: $WHITE;
-    background-color: blue;
+    display: flex;
+
+    &__item {
+        max-width: 50%;
+        flex: 1 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 37px 0;
+        font-size: 32px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            flex-direction: row;
+            padding: 60px 0;
+        }
+
+
+
+
+        //a{
+        //    display: flex;
+        //    flex-direction: column;
+        //    align-items: center;
+        //
+        //    @media (min-width: map_get($MEDIA, SM)) {
+        //        flex-direction: row;
+        //    }
+        //}
+
+        &_left {
+            background-color: $GRAY_100;
+            color: $BLACK;
+
+            @media (min-width: map_get($MEDIA, HD)) {
+                justify-content: flex-end;
+                padding-right: 10vw;
+            }
+
+            &:hover {
+                &::before {
+                    animation: move-left 1s ease-out infinite;
+                }
+            }
+
+            &::before {
+                order: 1;
+                content: '';
+                display: inline-block;
+                width: 31px;
+                height: 22px;
+                margin-right: 1.25rem;
+                margin-top: 1rem;
+                background: url("./../../images/icons/left-arrow.svg") no-repeat;
+                background-size: 100% 100%;
+
+                @media (min-width: map_get($MEDIA, SM)) {
+                    order: initial;
+                    margin-top: initial;
+                }
+            }
+        }
+
+        &_right {
+            background-color: $BLACK;
+            color: $WHITE;
+
+            @media (min-width: map_get($MEDIA, HD)) {
+                justify-content: flex-start;
+                padding-left: 10vw;
+            }
+
+
+            &:hover {
+                &::after {
+                    animation: move-right 1s ease-out infinite;
+                }
+            }
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 31px;
+                height: 22px;
+                margin-top: 1rem;
+                margin-left: 1.25rem;
+                background: url("./../../images/icons/right-arrow.svg") no-repeat;
+                background-size: 100% 100%;
+
+                @media (min-width: map_get($MEDIA, SM)) {
+                    margin-top: initial;
+                }
+            }
+        }
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
