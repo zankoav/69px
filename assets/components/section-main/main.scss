@@ -1,0 +1,10 @@
+@import "./../../common/constants";
+
+.main {
+    position: relative;
+    padding-top: $HEIGHT_HEADER;
+    height: 100vh;
+    font-size: 50px;
+    color: $WHITE;
+    background-color: green;
+}
