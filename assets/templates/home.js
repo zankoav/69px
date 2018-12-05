@@ -10,5 +10,3 @@ import './../components/section-paralax-window/paralax-window';
 import './../components/section-get-tuch/get-tuch';
 import './../components/navigation/navigation';
 import './../components/footer/footer';
-
-

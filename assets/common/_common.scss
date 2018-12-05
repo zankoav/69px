@@ -28,7 +28,7 @@ body {
     }
 
     @media (min-width: map_get($MEDIA, LG)) {
-        max-width: 1200px;
+        max-width: $MAX-WIDTH;
         margin-left: auto;
         margin-right: auto;
     }
