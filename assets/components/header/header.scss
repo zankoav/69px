@@ -1,0 +1,17 @@
+@import "./../../common/constants";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $HEIGHT_HEADER;
+    color: $WHITE;
+    z-index: 100;
+
+    &_fixed {
+        position: fixed;
+        background-color: $BLACK;
+    }
+}
+

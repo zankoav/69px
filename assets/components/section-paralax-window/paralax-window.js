@@ -1,0 +1,1 @@
+import './paralax-window.scss';
