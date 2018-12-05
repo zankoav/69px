@@ -24,12 +24,16 @@ const THEME_NAME = '69px';
 
 
 let entries = {
-    home: './home.js'
+    home: './home.js',
+    p404: './p404.js'
 };
 
 let pugs = {
     home: {
         title: "home title"
+    },
+    p404: {
+        title: "404 title"
     }
 };
 
@@ -48,7 +52,6 @@ const rimraf = require('rimraf');
 module.exports = {
     context: path.resolve(__dirname, 'assets/templates'),
     entry: entries,
-
     output: {
         path: path.resolve(__dirname, 'src'),
         publicPath: '/src/',
@@ -67,9 +70,9 @@ module.exports = {
                     minChunks: 2,
                     name: 'common',
                     enforce: true,
-                },
-            },
-        },
+                }
+            }
+        }
     },
     devtool: DEV_MODE ? 'source-map' : false,
     devServer: {

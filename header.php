@@ -7,3 +7,12 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class();?>>
+<div class="loader">
+    <div class="loader__squear">
+        <div class="loader__squear-top"></div>
+        <div class="loader__squear-black"></div>
+        <div class="loader__squear-bottom"></div>
+    </div>
+</div>
+<div class="app app_hide">
+    <header class="header">Header</header>
