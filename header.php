@@ -15,4 +15,3 @@
     </div>
 </div>
 <div class="app app_hide">
-    <header class="header">Header</header>

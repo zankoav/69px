@@ -1,0 +1,47 @@
+@import "./../../common/constants";
+
+.lang {
+    display: flex;
+
+    &_first{
+        opacity: 0;
+        animation: right-start-animation .6s 2.75s ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        flex-direction: column;
+    }
+
+    &_dark{
+        .lang__link{
+            color: $BLACK;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        color: $WHITE_05;
+        transition: all .6s;
+        padding-left: .5rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            padding: 2px .5rem;
+        }
+
+        &:hover {
+            color: $RED;
+        }
+
+        &_active {
+            color: $RED !important;
+        }
+    }
+}
+

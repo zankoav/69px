@@ -1,0 +1,46 @@
+mixin socials(className, isDark, isFirstScreen)
+    - var color = isDark ? '-dark' : '';
+    - var isFirst = isFirstScreen ? 'socials_first' : '';
+    ul(class=`socials ${className} ${isFirst}`)
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/ic-telegram${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/ic-instagram${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/ic-facebook${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/linked-in${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/behance${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/web${color}.svg`))
+
+mixin logo(isLight, isFirstScreen)
+    - var color = isLight ? 'logo' : 'logo_black';
+    - var isFirst = isFirstScreen ? 'logo_first' : '';
+    a(href='/' class=`logo ${isFirst}`)
+        img.logo__icon(src=require(`./../images/${color}.svg`))
+
+mixin menu(isLight, isClose, isFirstScreen)
+    - var isFirst = isFirstScreen ? 'menu_first' : '';
+    - var menuMod = isLight ? '' : 'menu_dark';
+    - var dottedMod = isClose ? 'menu__dotted_close' : '';
+    a(href="#" class=`menu ${menuMod} ${isFirst}`)
+        div(class=`menu__dotted ${dottedMod}`)
+            span.menu__dotte
+            span.menu__dotte
+            span.menu__dotte
+        .menu__title Menu
+
+mixin lang(isLight, isFirstScreen)
+    - var isFirst = isFirstScreen ? 'lang_first' : '';
+    - var menuMod = isLight ? '' : 'lang_dark';
+    div(class=`lang ${menuMod} ${isFirst}`)
+        a.lang__link.lang__link_active(href="#", data-lang="ru") Ru
+        a.lang__link(href="#", data-lang="en") En

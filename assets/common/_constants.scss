@@ -1,14 +1,17 @@
 //COLOR:
 $BLACK: #000000;
 $WHITE: #FFFFFF;
-$WHITE_05: rgba($WHITE,.5);
+$WHITE_05: rgba($WHITE, .5);
+$GRAY_05: rgba($BLACK, .5);
+$GRAY_07: rgba($BLACK, .7);
 $GRAY_100: #f1f1f1;
+$GRAY_200: #eeeeee;
 $GRAY: #292929;
 $RED: #ea1e25;
 
 //SIZE:
 $MAX-WIDTH: 1004px;
-$HEIGHT_HEADER: 70px;
+$HEIGHT_HEADER: 80px;
 
 //MEDIA:
 $MEDIA: (
@@ -22,3 +25,15 @@ $MEDIA: (
 );
 
 //MIXINS
+
+@mixin a-delay($i){
+    &:nth-child(#{$i}){
+        animation-delay: $i*100ms;
+    }
+}
+
+@mixin aa-delay($i){
+    &:nth-child(#{$i}){
+        animation-delay: 500ms + $i*400ms;
+    }
+}

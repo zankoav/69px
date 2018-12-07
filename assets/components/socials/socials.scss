@@ -1,0 +1,54 @@
+@import "./../../common/constants";
+
+.socials {
+    display: flex;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        flex-direction: row;
+        margin-left: auto;
+    }
+
+    &_first{
+        opacity: 0;
+        animation: right-start-animation .6s 2.75s ease-out;
+        animation-fill-mode: forwards;
+    }
+
+
+    &_small{
+        .socials__link {
+            padding: 0 .25rem;
+            width: 36px;
+        }
+    }
+
+    &_vertical {
+        position: relative;
+        z-index: 1;
+        flex-direction: column;
+        margin-left: initial;
+        align-self: flex-end;
+        text-align: center;
+        .socials__item {
+            padding: .3rem 0;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        .socials__link {
+            padding: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 0 .75rem;
+        transition: transform .6s;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}

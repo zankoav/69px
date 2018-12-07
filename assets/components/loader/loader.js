@@ -12,6 +12,8 @@ $(window).ready(function () {
         bottom: 0, // ширина элемента
         left: 0, // прозрачность элемента
     }, 2000, function () {
+        $('.main').removeClass('main_hide');
+        $('.header').removeClass('header_hide');
         $('.loader').fadeOut(600, function () {
             $('.app').removeClass('app_hide');
         });
