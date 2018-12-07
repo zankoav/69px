@@ -1,0 +1,54 @@
+@import "./../../common/constants";
+
+.contacts {
+
+    display: none;
+    align-self: center;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        display: block;
+    }
+
+    &__cart {
+        opacity: 0;
+        animation: showing .4s ease-out;
+        animation-fill-mode: forwards;
+        margin-bottom: 4rem;
+        @include a-delay(1);
+        @include a-delay(2);
+        @include a-delay(3);
+
+        &_empty {
+            margin-bottom: initial;
+        }
+    }
+
+    &__cart-title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 1rem;
+        color: $GRAY_07;
+
+
+    }
+
+    &__cart-text {
+        font-size: 20px;
+        color: $BLACK;
+        font-weight: 500;
+        margin-bottom: .5rem;
+
+        &_email {
+            &::after {
+                content: '';
+                width: 28px;
+                height: 28px;
+                margin-left: 4px;
+                display: inline-block;
+                background: url("./../../images/icons/victory.svg") no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+

@@ -23,10 +23,10 @@ function headerShowing() {
 }
 
 function headerDo() {
-    $header.fadeOut(function () {
+    // $header.fadeOut(function () {
         $header.toggleClass('header_fixed');
-        $header.fadeIn(function () {
-            $header.removeAttr('style');
-        });
-    });
+        // $header.fadeIn(function () {
+        //     $header.removeAttr('style');
+        // });
+    // });
 }

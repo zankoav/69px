@@ -5,15 +5,6 @@
     background-color: $GRAY;
     color: $WHITE;
 
-    &__logo-link {
-        line-height: 0;
-    }
-
-    &__logo {
-        width: 85px;
-        height: 24px;
-    }
-
     &__context {
         display: flex;
         height: 132px;

@@ -24,16 +24,12 @@ const THEME_NAME = '69px';
 
 
 let entries = {
-    home: './home.js',
-    p404: './p404.js'
+    home: './home.js'
 };
 
 let pugs = {
     home: {
         title: "home title"
-    },
-    p404: {
-        title: "404 title"
     }
 };
 

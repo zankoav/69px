@@ -1,1 +1,17 @@
-.main Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+.main.main_hide
+    video(class="main__video-sorce" loop="true")
+        source(type="video/mp4", src=require("./../videos/video_2.mp4"))
+    .container.h-100
+        .main__content.h-100
+            .main__video.main__video_first
+                .main__video-link Watch
+            img.main__down-icon(src=require('./../images/icons/bottom-arrow.svg'))
+            +socials('socials_vertical', false, true)
+            .main__slogan.main__slogan_first
+                .main__slogan-wrapper
+                    h1.main__title
+                        span.main__title-word Each
+                        span.main__title-word pixel
+                        span.main__title-word matters
+                            span.main__title-word-romb
+                    h6.main__subtitle.main__subtitle_first Design and development company

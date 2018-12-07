@@ -1,0 +1,17 @@
+@import "./../../common/constants";
+
+.logo {
+    line-height: 0;
+
+    &_first{
+        opacity: 0;
+        animation: left-start-animation .6s 2.75s ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    &__link {
+        width: 85px;
+        height: 24px;
+    }
+}
+

@@ -21,19 +21,6 @@
             padding: 60px 0;
         }
 
-
-
-
-        //a{
-        //    display: flex;
-        //    flex-direction: column;
-        //    align-items: center;
-        //
-        //    @media (min-width: map_get($MEDIA, SM)) {
-        //        flex-direction: row;
-        //    }
-        //}
-
         &_left {
             background-color: $GRAY_100;
             color: $BLACK;
@@ -89,7 +76,7 @@
                 height: 22px;
                 margin-top: 1rem;
                 margin-left: 1.25rem;
-                background: url("./../../images/icons/right-arrow.svg") no-repeat;
+                background: url("./../../images/icons/right-arraw.svg") no-repeat;
                 background-size: 100% 100%;
 
                 @media (min-width: map_get($MEDIA, SM)) {
