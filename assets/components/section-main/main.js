@@ -3,7 +3,10 @@ import $ from 'jquery';
 
 let mediaVideo = $(".main__video-sorce")[0];
 
-$('.main__video-link').hover(
+$('.main__video-link').click(function () {
+    $(mediaVideo).css('z-index', '0');
+    mediaVideo.play();
+}).hover(
     function () {
         $(mediaVideo).css('z-index', '0');
         mediaVideo.play();
