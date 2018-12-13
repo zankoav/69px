@@ -1,3 +1,39 @@
+<div class="get-tuch">
+    <div class="container container_small scrollme">
+        <h3 class="get-tuch__title animateme" data-when="enter" data-from="0.75" data-to="0.25" data-opacity="0" data-translatex="-200">Let’s get touch<span class="get-tuch__subtitle animateme" data-when="enter" data-from="0.7" data-to="0.2" data-opacity="0" data-translatex="-200">Feel free!</span></h3>
+        <div class="get-tuch__row">
+            <div class="get-tuch__col">
+                <form class="contact-form" action="/" method="post">
+                    <div class="group-form ">
+                        <label class="group-form__label" for="user-line">Drop a line</label>
+                        <input class="group-form__input" id="user-line" type="text" name="user-line">
+                    </div>
+                    <div class="group-form ">
+                        <label class="group-form__label" for="user-name">What is your name?</label>
+                        <input class="group-form__input" id="user-name" type="text" name="user-name">
+                    </div>
+                    <div class="group-form group-form_last">
+                        <label class="group-form__label" for="user-email">Your e-mail</label>
+                        <input class="group-form__input" id="user-email" type="email" name="user-email">
+                    </div><a class="button " href="#"><span class="button__line button__line_left"></span><span class="button__line button__line_right"></span><span class="button__text">Send</span></a>
+                </form>
+            </div>
+            <div class="get-tuch__col animateme" data-when="enter" data-from="0.7" data-to="0.2" data-opacity="0" data-translatex="200">
+                <div class="contacts contacts_light ">
+                    <div class="contacts__cart">
+                        <h4 class="contacts__cart-title">Contacts</h4>
+                        <p class="contacts__cart-text contacts__cart-text_email">hello@69px.by</p>
+                        <p class="contacts__cart-text">+375 (44) 776-90-69</p>
+                    </div>
+                    <div class="contacts__cart">
+                        <h4 class="contacts__cart-title">Location</h4>
+                        <p class="contacts__cart-text">16 Oktyabr'skaya str., Minsk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <nav class="navigation"><a class="navigation__item navigation__item_left" href="#" target="_blank">Contact</a><a
             class="navigation__item navigation__item_right" href="#" target="_blank">About us</a></nav>
 <footer class="footer">

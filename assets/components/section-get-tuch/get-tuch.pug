@@ -1,1 +1,27 @@
-.get-tuch Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+.get-tuch
+    .container.container_small.scrollme
+        h3.get-tuch__title.animateme(
+        data-when="enter"
+        data-from="0.75"
+        data-to="0.25"
+        data-opacity="0"
+        data-translatex="-200"
+        ) Let’s get touch
+            span.get-tuch__subtitle.animateme(
+            data-when="enter"
+            data-from="0.7"
+            data-to="0.2"
+            data-opacity="0"
+            data-translatex="-200"
+            ) Feel free!
+        .get-tuch__row
+            .get-tuch__col
+                +contactForm()
+            .get-tuch__col.animateme(
+            data-when="enter"
+            data-from="0.7"
+            data-to="0.2"
+            data-opacity="0"
+            data-translatex="200"
+            )
+                +contacts(true,false)

@@ -1,0 +1,22 @@
+mixin socials(className, isDark, isFirstScreen)
+    - var color = isDark ? '-dark' : '';
+    - var isFirst = isFirstScreen ? 'socials_first' : '';
+    ul(class=`socials ${className} ${isFirst}`)
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/ic-telegram${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/ic-instagram${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/ic-facebook${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/linked-in${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/behance${color}.svg`))
+        li.socials__item
+            a.socials__link(href='#')
+                img.socials__icon(src=require(`./../images/icons/web${color}.svg`))

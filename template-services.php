@@ -1,7 +1,12 @@
 <?php
 	/**
-	 * Created by PhpStorm.
-	 * User: alexandrzanko
-	 * Date: 12/6/18
-	 * Time: 9:10 PM
+	 * Template Name: Services
 	 */
+	get_header();
+?>
+
+
+
+<?php
+	get_footer();
+?>

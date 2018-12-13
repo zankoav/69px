@@ -2,7 +2,18 @@
 
 .paralax-window {
     position: relative;
-    font-size: 50px;
-    color: $WHITE;
-    background-color: blue;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        height: 150px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+        height: 250px;
+    }
 }

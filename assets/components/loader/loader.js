@@ -1,5 +1,6 @@
 import './loader.scss';
 import $ from 'jquery';
+import scrollme from './../../utils/_jquery.scrollme';
 
 $(window).ready(function () {
 
@@ -16,6 +17,9 @@ $(window).ready(function () {
         $('.header').removeClass('header_hide');
         $('.loader').fadeOut(600, function () {
             $('.app').removeClass('app_hide');
+            if($(window).width() > 767){
+                scrollme().init();
+            }
         });
     });
 });

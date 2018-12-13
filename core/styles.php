@@ -12,6 +12,9 @@
 
 			wp_enqueue_style( 'commons', Assets::getCss('common'), false, null );
 
+			if(true){
+
+			}
 			wp_enqueue_style( 'home', Assets::getCss('home'), false, null );
 
 			wp_enqueue_style( 'style', BASE_URL . '/style.css', false, null );

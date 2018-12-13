@@ -24,12 +24,28 @@ const THEME_NAME = '69px';
 
 
 let entries = {
-    home: './home.js'
+    home: './home.js',
+    about: './about.js',
+    contacts: './contacts.js',
+    projects: './projects.js',
+    services: './services.js'
 };
 
 let pugs = {
     home: {
         title: "home title"
+    },
+    about: {
+        title: "about title"
+    },
+    contacts: {
+        title: "contacts title"
+    },
+    projects: {
+        title: "projects title"
+    },
+    services: {
+        title: "services title"
     }
 };
 

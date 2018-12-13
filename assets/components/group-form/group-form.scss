@@ -1,0 +1,55 @@
+@import "./../../common/constants";
+
+.group-form{
+    margin-bottom: 70px;
+    position: relative;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        margin-bottom: 60px;
+    }
+
+    &_last{
+        margin-bottom: 47px;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            margin-bottom: 39px;
+        }
+    }
+
+    &_active{
+        .group-form__label{
+            font-size: 12px;
+            top: -22px;
+        }
+    }
+
+    &__label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $WHITE_05;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 3px 0;
+        transition: all .4s ease-out;
+    }
+
+    &__input{
+
+        display: block;
+        color: $WHITE;
+        background: transparent;
+        border: none;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 2px 0;
+        border-bottom: 1px solid $WHITE;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+
+}

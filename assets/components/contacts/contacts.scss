@@ -2,23 +2,42 @@
 
 .contacts {
 
-    display: none;
     align-self: center;
 
     @media (min-width: map_get($MEDIA, SM)) {
-        display: block;
+        max-width: 200px;
+    }
+
+    &_mobile_hide {
+        display: none;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            display: block;
+        }
+
+        .contacts__cart {
+            opacity: 0;
+            animation: showing .4s ease-out;
+            animation-fill-mode: forwards;
+            @include a-delay(1);
+            @include a-delay(2);
+            @include a-delay(3);
+        }
+    }
+
+    &_light {
+        .contacts__cart-title {
+            color: $WHITE_07;
+        }
+        .contacts__cart-text {
+            color: $WHITE;
+        }
     }
 
     &__cart {
-        opacity: 0;
-        animation: showing .4s ease-out;
-        animation-fill-mode: forwards;
         margin-bottom: 4rem;
-        @include a-delay(1);
-        @include a-delay(2);
-        @include a-delay(3);
 
-        &_empty {
+        &:last-child {
             margin-bottom: initial;
         }
     }
@@ -29,14 +48,13 @@
         margin-bottom: 1rem;
         color: $GRAY_07;
 
-
     }
 
     &__cart-text {
         font-size: 20px;
         color: $BLACK;
         font-weight: 500;
-        margin-bottom: .5rem;
+        line-height: 26px;
 
         &_email {
             &::after {

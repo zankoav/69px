@@ -1,0 +1,5 @@
+mixin groupInput(type, name, labelText, isLast)
+    - var lastMod = isLast ? 'group-form_last' : ''
+    div(class=`group-form ${lastMod}`)
+        label.group-form__label(for= name)=labelText
+        input.group-form__input(id= name, type= type, name= name )

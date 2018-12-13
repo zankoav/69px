@@ -1,25 +1,9 @@
-mixin socials(className, isDark, isFirstScreen)
-    - var color = isDark ? '-dark' : '';
-    - var isFirst = isFirstScreen ? 'socials_first' : '';
-    ul(class=`socials ${className} ${isFirst}`)
-        li.socials__item
-            a.socials__link(href='#')
-                img.socials__icon(src=require(`./../images/icons/ic-telegram${color}.svg`))
-        li.socials__item
-            a.socials__link(href='#')
-                img.socials__icon(src=require(`./../images/icons/ic-instagram${color}.svg`))
-        li.socials__item
-            a.socials__link(href='#')
-                img.socials__icon(src=require(`./../images/icons/ic-facebook${color}.svg`))
-        li.socials__item
-            a.socials__link(href='#')
-                img.socials__icon(src=require(`./../images/icons/linked-in${color}.svg`))
-        li.socials__item
-            a.socials__link(href='#')
-                img.socials__icon(src=require(`./../images/icons/behance${color}.svg`))
-        li.socials__item
-            a.socials__link(href='#')
-                img.socials__icon(src=require(`./../images/icons/web${color}.svg`))
+include ./pug-mixins/_socials
+include ./pug-mixins/_contacts
+include ./pug-mixins/_button
+include ./pug-mixins/_formGroup
+include ./pug-mixins/_contactForm
+
 
 mixin logo(isLight, isFirstScreen)
     - var color = isLight ? 'logo' : 'logo_black';

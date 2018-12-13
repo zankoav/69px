@@ -2,7 +2,65 @@
 
 .get-tuch {
     position: relative;
-    font-size: 50px;
-    color: $WHITE;
-    background-color: green;
+    background-color: $BLACK;
+    padding: 50px 0 65px;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        padding: 100px 0;
+    }
+
+    &__title {
+        color: $WHITE;
+        display: inline-block;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 67px;
+        font-weight: bold;
+        width: 80%;
+        margin-bottom: 84px;
+        position: relative;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            width: initial;
+            margin-bottom: 108px;
+        }
+    }
+
+    &__subtitle {
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 14px;
+        line-height: 1.14;
+        color: $WHITE;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            bottom: -1rem;
+            left: initial;
+            right: 0;
+        }
+    }
+
+    &__row{
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__col{
+        &:first-child{
+            flex: 1 0 auto;
+            margin-bottom: 67px;
+
+            @media (min-width: map_get($MEDIA, SM)) {
+                max-width: 400px;
+                margin-right: 65px;
+                margin-bottom: initial;
+            }
+        }
+    }
 }

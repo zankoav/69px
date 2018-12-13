@@ -11,5 +11,7 @@
 	require_once __DIR__ . '/utils/Lang.php';
 	require_once __DIR__ . '/utils/Assets.php';
 
+	require_once __DIR__ . '/core/init_theme.php';
+	require_once __DIR__ . '/core/menu.php';
 	require_once __DIR__ . '/core/styles.php';
 	require_once __DIR__ . '/core/scripts.php';

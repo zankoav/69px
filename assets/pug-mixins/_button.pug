@@ -1,0 +1,6 @@
+mixin button(text, isRed)
+    - var color = isRed ? 'button_red' : '';
+    a(class=`button ${color}`, href="#")
+        span.button__line.button__line_left
+        span.button__line.button__line_right
+        span.button__text= text

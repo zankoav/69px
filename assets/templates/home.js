@@ -15,3 +15,6 @@ import './../components/navigation/navigation';
 import './../components/footer/footer';
 import './../components/socials/socials';
 import './../components/contacts/contacts';
+import './../components/group-form/group-form';
+import './../components/button/button';
+

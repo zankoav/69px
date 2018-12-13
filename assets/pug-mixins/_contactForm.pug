@@ -1,0 +1,7 @@
+mixin contactForm()
+    form.contact-form(action='/' method='post')
+        +groupInput('text','user-line', 'Drop a line')
+        +groupInput('text','user-name', 'What is your name?')
+        +groupInput('email','user-email', 'Your e-mail', true)
+        +button('Send')
+
