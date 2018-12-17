@@ -28,23 +28,3 @@
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 	}
-
-
-	// allow SVG uploads
-	add_filter( 'upload_mimes', 'custom_upload_mimes' );
-	function custom_upload_mimes( $existing_mimes = array() ) {
-		$existing_mimes['svg'] = 'image/svg+xml';
-
-		return $existing_mimes;
-	}
-
-	function fix_svg() {
-		echo '<style type="text/css">
-          .attachment-266x266, .thumbnail img {
-               width: 100% !important;
-               height: auto !important;
-          }
-          </style>';
-	}
-
-	add_action( 'admin_head', 'fix_svg' );
