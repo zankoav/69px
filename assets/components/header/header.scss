@@ -18,6 +18,25 @@
         transition: all .6s ;
     }
 
+    &_light{
+        .menu__dotte{
+            background-color: $BLACK;
+        }
+
+        .menu__title{
+            color: $BLACK;
+        }
+
+        .lang__link{
+            color: $BLACK_05;
+        }
+
+        &.header_fixed{
+            background-color: $GRAY_200;
+        }
+        
+    }
+
     @media (min-width: map_get($MEDIA, SM)) {
         height: $HEIGHT_HEADER;
 

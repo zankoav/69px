@@ -1,0 +1,38 @@
+@import "./../../common/constants";
+
+.contact-main {
+    position: relative;
+    z-index: 1;
+    padding: 169px 0 143px;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        padding: 169px 0 143px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+        padding: 174px 0 134px;
+    }
+
+    .title-1{
+        color: $BLACK_1;
+    }
+
+    .animation-description{
+        span {
+            color: $BLACK;
+
+            &:hover{
+                color: $RED;
+            }
+        }
+    }
+
+    &__button{
+        margin-top: 47px;
+
+        .button__text{
+            color: $BLACK;
+            padding: 16px 30px;
+        }
+    }
+}

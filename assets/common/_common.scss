@@ -14,6 +14,10 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: $BLACK;
+
+    &.body_light{
+        background-color: $GRAY_200;
+    }
 }
 
 .d-none {
@@ -48,6 +52,20 @@ body {
         @media (min-width: map_get($MEDIA, SM)) {
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+
+    &_middle{
+        max-width: 85%;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            max-width: 930px;
         }
     }
 }

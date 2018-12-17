@@ -1,25 +1,27 @@
-header.header.header_top.header_hide
-    .container.header__content
-        +logo(true, true)
-        +menu(true, false, true)
-        +lang(true, true)
-    .header__slide-menu
-        .header_top
-            .container.header__content
-                +logo(false, false)
-                +menu(false, true)
-                +lang(false)
-        .menu__content
-            .menu__inner.container
-                ul.menu__items
-                    li.menu__item(data-num="01")
-                        a(href="#") Home
-                    li.menu__item.menu__item_active(data-num="02")
-                        a(href="#") Team
-                    li.menu__item(data-num="03")
-                        a(href="#") Services
-                    li.menu__item(data-num="04")
-                        a(href="#") Contact
-                    li.menu__item(data-num="05")
-                        a(href="#") Project
-                +contacts(false,true, true)
+mixin header(isLight)
+    - var lightMod = isLight ? 'header_light' : ''
+    header(class=`header header_top header_hide ${lightMod}`)
+        .container.header__content
+            +logo(!isLight, true)
+            +menu(true, false, true)
+            +lang(true, true)
+        .header__slide-menu
+            .header_top
+                .container.header__content
+                    +logo(false, false)
+                    +menu(false, true)
+                    +lang(false)
+            .menu__content
+                .menu__inner.container
+                    ul.menu__items
+                        li.menu__item(data-num="01")
+                            a(href="#") Home
+                        li.menu__item.menu__item_active(data-num="02")
+                            a(href="#") Team
+                        li.menu__item(data-num="03")
+                            a(href="#") Services
+                        li.menu__item(data-num="04")
+                            a(href="#") Contact
+                        li.menu__item(data-num="05")
+                            a(href="#") Project
+                    +contacts(false,true, true)

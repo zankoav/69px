@@ -1,0 +1,15 @@
+@import "./../../common/constants";
+
+.services-main{
+    position: relative;
+    z-index: 1;
+    padding: 181px 0 185px;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        padding: 230px 0 296px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+        padding: 268px 0 218px;
+    }
+}

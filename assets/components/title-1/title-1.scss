@@ -1,0 +1,29 @@
+@import "./../../common/constants";
+
+.title-1 {
+    font-size: 24px;
+    color: $WHITE;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: show-title 1s 3s ease-out;
+    animation-fill-mode: forwards;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        margin-bottom: 22px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+        margin-bottom: 38px;
+    }
+}
+
+@keyframes show-title {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 0.49;
+        transform: translateX(0);
+    }
+}

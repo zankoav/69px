@@ -6,6 +6,13 @@
 	get_header();
 ?>
 
+<div class="about-main">
+    <div class="container container_middle">
+        <h1 class="title-1">About us</h1>
+        <div class="animation-description">We are a design and development company based in Minsk.</div>
+        <div class="animation-description">We convert marketing strategies into visually stunning digital services.</div>
+    </div>
+</div>
 <div class="trust-us">
     <div class="trust-us__map-wrapper"><img class="trust-us__map"
                                             src="/wp-content/themes/69px/src/icons/map.72565f.png"></div>

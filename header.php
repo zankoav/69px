@@ -4,9 +4,20 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
+	<?php
+		wp_head();
+
+		$options       = get_option( THEME_NAME . '_theme_options' );
+		$isContactPage = is_page_template( 'template-contacts.php' );
+		$bodyMod       = $isContactPage ? 'body_light' : '';
+		$headerMod     = $isContactPage ? 'header_light' : '';
+
+		$logoLight = $options['logo_light'];
+		$logoDark  = $options['logo_dark'];
+		$logoUrl   = $isContactPage ? $logoDark : $logoLight;
+	?>
 </head>
-<body <?php body_class();?>>
+<body <?php body_class( $bodyMod ); ?>>
 <div class="loader">
     <div class="loader__squear">
         <div class="loader__squear-top"></div>
@@ -15,10 +26,10 @@
     </div>
 </div>
 <div class="app app_hide">
-    <header class="header header_top header_hide">
+    <header class="header header_top header_hide <?= $headerMod; ?>">
         <div class="container header__content">
             <a class="logo logo_first" href="/"><img class="logo__icon"
-                                                                                        src="/wp-content/themes/69px/src/icons/logo.ced516.svg"></a><a
+                                                     src="<?= $logoUrl; ?>"></a><a
                     class="menu  menu_first" href="#">
                 <div class="menu__dotted "><span class="menu__dotte"></span><span class="menu__dotte"></span><span
                             class="menu__dotte"></span></div>
@@ -30,7 +41,7 @@
         <div class="header__slide-menu">
             <div class="header_top">
                 <div class="container header__content"><a class="logo " href="/"><img class="logo__icon"
-                                                                                      src="/wp-content/themes/69px/src/icons/logo_black.77e068.svg"></a><a
+                                                                                      src="<?= $logoDark ?>"></a><a
                             class="menu menu_dark " href="#">
                         <div class="menu__dotted menu__dotted_close"><span class="menu__dotte"></span><span
                                     class="menu__dotte"></span><span class="menu__dotte"></span></div>
@@ -43,7 +54,7 @@
             </div>
             <div class="menu__content">
                 <div class="menu__inner container">
-					<?php get_template_part('templates/content','menu');?>
+					<?php get_template_part( 'templates/content', 'menu' ); ?>
                     <div class="contacts  contacts_mobile_hide">
                         <div class="contacts__cart">
                             <h4 class="contacts__cart-title">Contacts</h4>

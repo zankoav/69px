@@ -1,10 +1,10 @@
 include ./../mixins
 include ./../components/head
-body
+body.body_light
     include ./../components/loader/loader
     .app.app_hide
-        include ./../components/header/header
-        //    contacts
+        +header(true)
+        +contact-main()
         include ./../components/section-get-tuch/get-tuch
         include ./../components/navigation/navigation
         include ./../components/footer/footer
