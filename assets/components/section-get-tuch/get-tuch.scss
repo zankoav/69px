@@ -18,10 +18,18 @@
         width: 80%;
         margin-bottom: 84px;
         position: relative;
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: all 1.5s ease-out;
 
         @media (min-width: map_get($MEDIA, SM)) {
             width: initial;
             margin-bottom: 108px;
+        }
+
+        &_show{
+            opacity: 1;
+            transform: translateX(0);
         }
     }
 
@@ -33,11 +41,19 @@
         font-size: 14px;
         line-height: 1.14;
         color: $WHITE;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 2s ease-out;
 
         @media (min-width: map_get($MEDIA, SM)) {
             bottom: -1rem;
             left: initial;
             right: 0;
+        }
+
+        &_show{
+            opacity: 1;
+            transform: translateX(0);
         }
     }
 
