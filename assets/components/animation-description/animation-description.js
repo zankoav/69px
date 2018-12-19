@@ -5,7 +5,10 @@ let anims = document.getElementsByClassName('animation-description');
 for (let anim of anims) {
 
     let words = anim.innerHTML.split(' ');
-    let wordsView = words.map(function (word, index) {
+    let clearWords = words.filter(words, function (word) {
+        return word !== ' ';
+    });
+    let wordsView = clearWords.map(function (word, index) {
         let p = document.createElement('p');
         for (let letter of word) {
             let span = document.createElement('span');
