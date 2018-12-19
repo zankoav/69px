@@ -1,2 +1,19 @@
 mixin weDo()
-    .we-do sectetur cum deserunt eaque earum enim eveniet explicabo facilis hic id illum maiores minus natus odio officiis omnis perspiciatis provident qui repellendus sed sequi sit totam veritatis, vitae? Aspernatur eius eos et, eveniet ipsam mollitia odit qui! A consectetur consequuntur dolor pariatur, quae quo sit vel! Alias animi at consequuntur cum, eos et explicabo fuga in, magni nesciunt odio optio ratione ut?
+    .we-do
+        .container
+            .we-do__wrapper
+                .we-do__wrapper-top
+                    header.we-do__header
+                        .we-do__header-title
+                            +red-title('What', 'we do', 'red-title_we-do')
+                        .we-do__text The mission of the company is to develop efficient design solutions suitable for business goals of the clients.
+                    .we-do__text.we-do__text_left We help companies make the world better
+                    .we-do__button
+                        +button('More', true)
+                .we-do__services
+                    .we-do__service
+                        +service('UX|UI Design', 'Design and develop interfaces')
+                    .we-do__service
+                        +service('Service Design', 'Help to create human-oriented services')
+                    .we-do__service
+                        +service('Mobile|AR', 'Mobile apps and Augmented Reality')

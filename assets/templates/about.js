@@ -20,6 +20,10 @@ import './../components/button/button';
 import './../components/about-main/about-main';
 import './../components/animation-description/animation-description';
 import './../components/title-1/title-1';
+import './../components/team/team';
+import './../components/user/user';
+import './../components/title-2/title-2';
+
 
 
 

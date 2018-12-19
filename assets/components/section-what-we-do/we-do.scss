@@ -2,6 +2,203 @@
 
 .we-do {
     position: relative;
-    height: 100vh;
-    background-color: blue;
+    padding: 84px 0 67px;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        padding: 153px 0 153px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+        padding: 195px 0 96px;
+    }
+
+    &__wrapper{
+        position: relative;
+
+        &:after,  &:before {
+            position: absolute;
+            content: '';
+            background: $BLACK url('./../images/what-we-do.jpg') no-repeat 60%;
+            background-size: cover;
+            width: 40%;
+            height: 354px;
+            top: 18%;
+            right: -6%;
+            z-index: 0;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 1s ease-out;
+
+            @media (max-width: map_get($MEDIA, SM) ) and (orientation: landscape) {
+                width: 75%;
+                height: 60%;
+                background-position: 120%;
+                top: 28%;
+                right: -10%;
+            }
+
+            @media (min-width: map_get($MEDIA, SM)) {
+                width: 83%;
+                height: 67%;
+                background-position: 100%;
+                top: 25%;
+                right: -10%;
+            }
+
+            @media (min-width: map_get($MEDIA, MD)) {
+                width: 680px;
+                height: 439px;
+                background-position: 100%;
+                top: 24%;
+                right: 0;
+            }
+
+            @media (min-width: map_get($MEDIA, LG)) {
+                width: 732px;
+                height: 470px;
+                background-position: 100%;
+                top: 22%;
+                right: 0;
+            }
+        }
+
+        &:before{
+            background: $BLACK;
+            z-index: 0;
+        }
+
+        &_show{
+
+            &:after {
+                opacity: 0.8;
+                transform: translateX(0);
+            }
+
+            &:before{
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+
+
+    &__services {
+        position: relative;
+        max-width: initial;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -34px;
+        margin-right: -34px;
+        color: $WHITE;
+        z-index: 1;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all .75s ease-out;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            margin-left: -24px;
+            margin-right: -24px;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            margin-left: -34px;
+            margin-right: -34px;
+        }
+
+        &_show{
+            opacity: 1;
+            transform: translateY(0);
+
+            @media (min-width: map_get($MEDIA, SM)) {
+                transform: translateY(0);
+            }
+
+            @media (min-width: map_get($MEDIA, LG)) {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__service {
+        padding: 1rem 34px;
+        width: 100%;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            padding: 0 24px;
+            max-width: 33.333%;
+            flex: 1 0 33%;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            padding: 0 34px;
+        }
+    }
+
+    &__wrapper-top {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        color: $WHITE;
+        font-size: 14px;
+        max-width: 360px;
+        opacity: 0;
+        transform: translateX(200px);
+        transition: all 1.5s ease-out;
+
+        &_left {
+            max-width: 164px;
+            display: none;
+            transform: translateX(-200px);
+
+            @media (min-width: map_get($MEDIA, SM)) {
+                display: block;
+            }
+        }
+
+        &_show{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &__button {
+        margin: 40px 0 88px;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            margin: 60px 0 150px;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            margin: 60px 0 190px;
+        }
+    }
+
+    &__header-title{
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: all 1s ease-out;
+
+        &_show{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 }

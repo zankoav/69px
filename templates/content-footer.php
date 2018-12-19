@@ -1,6 +1,8 @@
 <div class="get-tuch">
-    <div class="container container_small scrollme">
-        <h3 class="get-tuch__title animateme" data-when="enter" data-from="0.75" data-to="0.25" data-opacity="0" data-translatex="-200">Let’s get touch<span class="get-tuch__subtitle animateme" data-when="enter" data-from="0.7" data-to="0.2" data-opacity="0" data-translatex="-200">Feel free!</span></h3>
+    <div class="container container_small">
+        <div class="get-tuch__title">
+            <h3 class="title-2">Let’s get touch<span class="title-2__subtitle">Feel free!</span></h3>
+        </div>
         <div class="get-tuch__row">
             <div class="get-tuch__col">
                 <form class="contact-form" action="/" method="post">
@@ -18,7 +20,7 @@
                     </div><a class="button " href="#"><span class="button__line button__line_left"></span><span class="button__line button__line_right"></span><span class="button__text">Send</span></a>
                 </form>
             </div>
-            <div class="get-tuch__col animateme" data-when="enter" data-from="0.7" data-to="0.2" data-opacity="0" data-translatex="200">
+            <div class="get-tuch__col get-tuch__contacts">
                 <div class="contacts contacts_light ">
                     <div class="contacts__cart">
                         <h4 class="contacts__cart-title">Contacts</h4>

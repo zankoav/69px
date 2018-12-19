@@ -1,9 +1,9 @@
 .get-tuch
     .container.container_small
-        h3.get-tuch__title Let’s get touch
-            span.get-tuch__subtitle Feel free!
+        .get-tuch__title
+            +title-2('Let’s get touch', 'Feel free!')
         .get-tuch__row
             .get-tuch__col
                 +contactForm()
-            .get-tuch__col
+            .get-tuch__col.get-tuch__contacts
                 +contacts(true,false)

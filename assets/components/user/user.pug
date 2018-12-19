@@ -1,0 +1,16 @@
+mixin user(image, name, position, linkedin, fasebook)
+    .user
+        .user__image(style=`background-image:url(${image})`)
+            span.user__lines.user__lines_left
+            span.user__lines.user__lines_right
+            .user__socials
+                - if(linkedin)
+                    a.user__link(href=linkedin, target="_blank")
+                        i.fab.fa-linkedin-in
+                - if(fasebook)
+                    a.user__link(href=linkedin, target="_blank")
+                        i.fab.fa-facebook-f
+        .user__date
+            h3.user__name= name
+            p.user__position= position
+
