@@ -10,9 +10,7 @@
         <div class="container container_middle">
             <h1 class="title-1">About us</h1>
             <div class="animation-description">We are a design and development company based in Minsk.</div>
-            <div class="animation-description">We convert marketing strategies into visually stunning digital
-                services.
-            </div>
+            <div class="animation-description">We convert marketing strategies into visually stunning digital services.</div>
         </div>
     </div>
     <div class="team">
