@@ -5,7 +5,7 @@ let anims = document.getElementsByClassName('animation-description');
 for (let anim of anims) {
 
     let words = anim.innerHTML.split(' ');
-    let clearWords = words.filter(words, function (word) {
+    let clearWords = words.filter(function (word) {
         return word !== ' ';
     });
     let wordsView = clearWords.map(function (word, index) {
