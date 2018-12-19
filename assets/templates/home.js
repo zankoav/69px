@@ -17,4 +17,7 @@ import './../components/socials/socials';
 import './../components/contacts/contacts';
 import './../components/group-form/group-form';
 import './../components/button/button';
+import './../components/red-title/red-title';
+import './../components/service/service';
+import './../components/title-2/title-2';
 

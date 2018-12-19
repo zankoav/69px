@@ -46,6 +46,43 @@
             </div>
         </div>
     </div>
+    <div class="we-do">
+        <div class="container">
+            <div class="we-do__wrapper">
+                <div class="we-do__wrapper-top">
+                    <header class="we-do__header">
+                        <div class="we-do__header-title">
+                            <h2 class="red-title red-title_we-do"><span class="red-title__gray">What</span><span class="red-title__red">we do</span></h2>
+                        </div>
+                        <div class="we-do__text">The mission of the company is to develop efficient design solutions suitable for business goals of the clients.</div>
+                    </header>
+                    <div class="we-do__text we-do__text_left">We help companies make the world better</div>
+                    <div class="we-do__button"><a class="button button_red" href="#"><span class="button__line button__line_left"></span><span class="button__line button__line_right"></span><span class="button__text">More</span></a>
+                    </div>
+                </div>
+                <div class="we-do__services">
+                    <div class="we-do__service">
+                        <div class="service">
+                            <h3 class="service__title">UX|UI Design</h3>
+                            <p class="service__subtitle">Design and develop interfaces</p>
+                        </div>
+                    </div>
+                    <div class="we-do__service">
+                        <div class="service">
+                            <h3 class="service__title">Service Design</h3>
+                            <p class="service__subtitle">Help to create human-oriented services</p>
+                        </div>
+                    </div>
+                    <div class="we-do__service">
+                        <div class="service">
+                            <h3 class="service__title">Mobile|AR</h3>
+                            <p class="service__subtitle">Mobile apps and Augmented Reality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="trust-us">
         <div class="trust-us__map-wrapper"><img class="trust-us__map"
                                                 src="/wp-content/themes/69px/src/icons/map.72565f.png"></div>

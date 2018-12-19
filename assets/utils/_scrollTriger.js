@@ -3,6 +3,10 @@ import $ from "jquery";
 export function scrollTrigger($element, modificator, delta, mobileDelta) {
 
     return function(){
+        if($element.length === 0){
+            return;
+        }
+        
         let hT = $element.offset().top,
             hH = $element.outerHeight(),
             wH = $(window).height(),

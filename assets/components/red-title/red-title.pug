@@ -1,0 +1,5 @@
+mixin red-title(grayText, redText, mod)
+    - var mod = mod ? mod : '';
+    h2(class=`red-title ${mod}`)
+        span.red-title__gray= grayText
+        span.red-title__red= redText

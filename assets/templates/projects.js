@@ -18,3 +18,5 @@ import './../components/button/button';
 import './../components/animation-description/animation-description';
 import './../components/title-1/title-1';
 import './../components/projects-main/projects-main';
+import './../components/title-2/title-2';
+

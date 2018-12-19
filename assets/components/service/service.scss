@@ -1,0 +1,36 @@
+@import "./../../common/constants";
+
+.service {
+    color: $WHITE;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    &__title {
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.15);
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 14px;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            font-size: 30px;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            font-size: 37px;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 300;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            font-size: 16px;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "./../../common/constants";
+
+.red-title {
+    font-size: 97px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 0.9;
+    color: $WHITE;
+    margin-bottom: 2rem;
+
+    @media (max-width: map_get($MEDIA, SM)) and (orientation: portrait) {
+        width: 80%;
+    }
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        margin-bottom: 18px;
+        width: initial;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+        margin-bottom: 27px;
+    }
+
+    &_we-do{
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            max-width: 300px;
+            flex: 1 0 300px;
+        }
+    }
+
+    &__red {
+        color: $RED;
+
+        &::before {
+            content: ' ';
+        }
+    }
+}
+
