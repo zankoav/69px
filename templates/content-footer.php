@@ -1,3 +1,9 @@
+<?php
+
+$options = SingletonOptions::getOptions();
+
+?>
+
 <div class="get-tuch">
     <div class="container container_small">
         <div class="get-tuch__title">
@@ -44,12 +50,24 @@
             <div class="footer__copy-right">&copy; <span class="footer__copy-right-number">69</span> - 2018
             </div>
             <ul class="socials undefined ">
-                <li class="socials__item"><a class="socials__link" href="#"><img class="socials__icon" src="/wp-content/themes/69px/src/icons/ic-telegram.dd0ffa.svg"></a></li>
-                <li class="socials__item"><a class="socials__link" href="#"><img class="socials__icon" src="/wp-content/themes/69px/src/icons/ic-instagram.73e216.svg"></a></li>
-                <li class="socials__item"><a class="socials__link" href="#"><img class="socials__icon" src="/wp-content/themes/69px/src/icons/ic-facebook.293ce7.svg"></a></li>
-                <li class="socials__item"><a class="socials__link" href="#"><img class="socials__icon" src="/wp-content/themes/69px/src/icons/linked-in.cbd19f.svg"></a></li>
-                <li class="socials__item"><a class="socials__link" href="#"><img class="socials__icon" src="/wp-content/themes/69px/src/icons/behance.920e86.svg"></a></li>
-                <li class="socials__item"><a class="socials__link" href="#"><img class="socials__icon" src="/wp-content/themes/69px/src/icons/web.b3a778.svg"></a></li>
+                <li class="socials__item">
+	                <a class="socials__link" href="<?= $options['telegram_link']?>">
+		                <img class="socials__icon" src="/wp-content/themes/69px/src/icons/ic-telegram.dd0ffa.svg"></a></li>
+                <li class="socials__item">
+	                <a class="socials__link" href="<?= $options['insta_link']?>">
+		                <img class="socials__icon" src="/wp-content/themes/69px/src/icons/ic-instagram.73e216.svg"></a></li>
+                <li class="socials__item">
+	                <a class="socials__link" href="<?= $options['facebook_social_link']?>">
+		                <img class="socials__icon" src="/wp-content/themes/69px/src/icons/ic-facebook.293ce7.svg"></a></li>
+                <li class="socials__item">
+	                <a class="socials__link" href="<?= $options['linkedin_link']?>">
+		                <img class="socials__icon" src="/wp-content/themes/69px/src/icons/linked-in.cbd19f.svg"></a></li>
+                <li class="socials__item">
+	                <a class="socials__link" href="<?= $options['behance_url']?>">
+		                <img class="socials__icon" src="/wp-content/themes/69px/src/icons/behance.920e86.svg"></a></li>
+                <li class="socials__item">
+	                <a class="socials__link" href="<?= $options['web_link']?>">
+		                <img class="socials__icon" src="/wp-content/themes/69px/src/icons/web.b3a778.svg"></a></li>
             </ul>
         </div>
     </div>
