@@ -16,7 +16,7 @@ function  member_metabox() {
 		'type' => 'text'
 	) );
 	$cmb->add_field( array(
-		'name' => 'name eu',
+		'name' => 'name ru',
 		'id'   => $prefix.'_name_ru',
 		'type' => 'text'
 	) );

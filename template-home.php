@@ -2,6 +2,10 @@
 /**
  * Template Name: Home
  */
+$meta = get_post_meta(1);
+var_dump($meta);
+var_dump(get_post(1));
+
 $options = SingletonOptions::getOptions();
 $ln      = Lang::current();
 
