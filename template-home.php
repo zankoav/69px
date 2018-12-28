@@ -2,6 +2,7 @@
 /**
  * Template Name: Home
  */
+
 $options = SingletonOptions::getOptions();
 $ln      = Lang::current();
 

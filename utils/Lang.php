@@ -74,6 +74,30 @@ class Lang {
 			'ru' => 'Каждый важен',
 			'en' => 'Everyone Matters'
 		],
+		'Lets_get_touch'               => [
+			'ru' => 'Давайте прикосновение',
+			'en' => 'Let’s get touch'
+		],
+		'Feel free!'               => [
+			'ru' => 'Не стесняйтесь!',
+			'en' => 'Feel free!'
+		],
+		'Drop a line'               => [
+			'ru' => 'Черкнуть',
+			'en' => 'Drop a line'
+		],
+		'What is your name?'               => [
+			'ru' => 'Как тебя зовут?',
+			'en' => 'What is your name?'
+		],
+		'Your e-mail'               => [
+			'ru' => 'Твой email',
+			'en' => 'Your e-mail'
+		],
+		'send'               => [
+			'ru' => 'Отправить',
+			'en' => 'send'
+		],
 	];
 
 	public static function current() {
