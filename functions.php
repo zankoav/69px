@@ -31,11 +31,6 @@ require_once __DIR__ . '/core/customPostType/member.php';
 require_once __DIR__ . '/core/cmb2/member_meta.php';
 
 //add meta titles
-require_once __DIR__ . '/core/cmb2/add_meta_title.php';
+require_once __DIR__ . '/core/customPostType/customPageMeta.php';
 
 
-add_filter('the_title', 'change_title',10 ,2);
-function change_title($title, $id){
-	$post_meta = get_post_meta($id);
-	return $title;
-}

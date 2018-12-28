@@ -12,6 +12,38 @@ $Drop_a_line       = Lang::get( 'Drop a line' );
 $What_is_your_name = Lang::get( 'What is your name?' );
 $Your_e_mail       = Lang::get( 'Your e-mail' );
 $send              = Lang::get( 'send' );
+
+$menu_name = 'main';
+$location  = get_nav_menu_locations();
+$items     = wp_get_nav_menu_items( $location[ $menu_name ] );
+
+$prev_page;
+$current_page;
+$next_page;
+$menu_items_id;
+
+for ( $i = 0; $i < count( $items ); $i ++ ) {
+	$menu_items_id[] = $items[$i]->object_id;
+	if ( $items[ $i ]->object_id == get_the_ID() ) {
+		if ( $i === count( $items ) - 1 ) {
+			$prev_page    = [ 'title' => $items[ $i - 1 ]->title,
+                        'url'   => $items[ $i - 1 ]->url ];
+			$next_page    = [ 'title' => $items[0]->title,
+                        'url'   => $items[0]->url ];
+		} else if ( $i === 0 ) {
+			$prev_page = [ 'title' => $items[ count( $items ) - 1 ]->title,
+                     'url'   => $items[ count( $items ) - 1 ]->url ];
+			$next_page = [ 'title' => $items[ $i + 1 ]->title,
+                     'url'   => $items[ $i + 1 ]->url ];
+		} else {
+			$prev_page = [ 'title' => $items[$i - 1]->title,
+                     'url'   => $items[$i - 1]->url ];
+			$next_page = [ 'title' => $items[$i + 1]->title,
+                     'url'   => $items[$i + 1]->url ];
+		}
+	}
+}
+
 ?>
 
 <div class="get-tuch">
@@ -37,7 +69,7 @@ $send              = Lang::get( 'send' );
           <a class="button " href="#">
             <span class="button__line button__line_left"></span>
             <span class="button__line button__line_right"></span>
-            <span class="button__text"><?=$send?></span>
+            <span class="button__text"><?= $send ?></span>
           </a>
         </form>
       </div>
@@ -57,10 +89,14 @@ $send              = Lang::get( 'send' );
     </div>
   </div>
 </div>
+
+<?php if (in_array(get_the_ID(),$menu_items_id)):?>
 <nav class="navigation">
-  <a class="navigation__item navigation__item_left" href="#" target="_blank">Contact</a>
-  <a class="navigation__item navigation__item_right" href="#" target="_blank">About us</a>
+  <a class="navigation__item navigation__item_left" href="<?= $prev_page['url']?>" target="_blank"><?= $prev_page['title']?></a>
+  <a class="navigation__item navigation__item_right" href="<?= $next_page['url']?>" target="_blank"><?= $next_page['title']?></a>
 </nav>
+<?php endif;?>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__context">
