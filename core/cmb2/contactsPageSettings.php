@@ -7,7 +7,7 @@ function sixnene_px_contacts() {
 
 	$cmb_options = new_cmb2_box( array(
 		'id'           => $prefix . '_contacts_page',
-		'title'        => esc_html__( 'Настройки страницы контакты', THEME_NAME ),
+		'title'        => esc_html__( 'Настройка Страницы Контактов', THEME_NAME ),
 		'object_types' => array( 'options-page' ),
 
 		'option_key'   => 'contacts_settings',
@@ -24,50 +24,58 @@ function sixnene_px_contacts() {
 	) );
 
 	$cmb_options->add_field( array(
-		'name' => __( 'title', THEME_NAME),
-		'id'   => $prefix . 'contacts_main_title_en',
-		'type' => 'text',
-		'default' => 'Contacts'
-	) );$cmb_options->add_field( array(
-		'name' => __( 'title', THEME_NAME),
+		'name' => __( 'Приветствие', THEME_NAME ),
+		'id'   => $prefix . 'welcome_contacts_title',
+		'type' => 'title'
+	) );
+
+
+	$cmb_options->add_field( array(
+		'name' => __( 'Заголовок RU', THEME_NAME),
 		'id'   => $prefix . 'contacts_main_title_ru',
 		'type' => 'text',
-		'default' => 'Контакт'
+		'default' => 'Контакты'
 	) );
 
 	$cmb_options->add_field( array(
-		'name' => __( 'paragraph', THEME_NAME),
-		'id'   => $prefix . 'contacts_paragraph_en',
-		'type' => 'textarea',
-		'default' => 'HAS OUR WORK CAU YOUR EYE?'
+		'name' => __( 'Заголовок EN', THEME_NAME),
+		'id'   => $prefix . 'contacts_main_title_en',
+		'type' => 'text',
+		'default' => 'Contacts'
 	) );
+
 	$cmb_options->add_field( array(
-		'name' => __( 'paragraph', THEME_NAME),
+		'name' => __( 'Текст RU', THEME_NAME),
 		'id'   => $prefix . 'contacts_paragraph_ru',
 		'type' => 'textarea',
 		'default' => 'НАША РАБОТА ПОРЕЗАЛА ТЕБЕ ГЛАЗ?'
 	) );
 
 	$cmb_options->add_field( array(
-		'name' => __( 'button text', THEME_NAME),
-		'id'   => $prefix . 'button_text_en',
-		'type' => 'text',
-		'default' => 'Let’s have a coffee'
-	) );$cmb_options->add_field( array(
-		'name' => __( 'текст кнопки', THEME_NAME),
+		'name' => __( 'Текст EN', THEME_NAME),
+		'id'   => $prefix . 'contacts_paragraph_en',
+		'type' => 'textarea',
+		'default' => 'HAS OUR WORK CAU YOUR EYE?'
+	) );
+
+	$cmb_options->add_field( array(
+		'name' => __( 'Текст кнопки RU', THEME_NAME),
 		'id'   => $prefix . 'button_text_ru',
 		'type' => 'text',
 		'default' => 'Давайте выпьем кофе.'
 	) );
+
 	$cmb_options->add_field( array(
-		'name' => __( 'button link', THEME_NAME),
-		'id'   => $prefix . 'button_link_en',
+		'name' => __( 'Текст кнопки EN', THEME_NAME),
+		'id'   => $prefix . 'button_text_en',
+		'type' => 'text',
+		'default' => 'Let’s have a coffee'
+	) );
+
+	$cmb_options->add_field( array(
+		'name' => __( 'Ссылка кнопки', THEME_NAME),
+		'id'   => $prefix . 'button_link',
 		'type' => 'text_url',
-		'default' => '/'
-	) );$cmb_options->add_field( array(
-		'name' => __( 'ссылка кнопки', THEME_NAME),
-		'id'   => $prefix . 'button_link_ru',
-		'type' => 'text_url',
-		'default' => '/'
+		'default' => 'http://69pixels.com'
 	) );
 }
